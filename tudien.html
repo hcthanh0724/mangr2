@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="dic">
+<button onclick="translate()">Translate</button>
+<div id="z"></div>
+</body>
+</html>
+
+<script>
+    function translate () {
+        let english = ["elephant", "dog", "cat", "dragon"]
+        let vietnamese = ["voi", "cho", "meo", "rong"]
+        let meta = document.getElementById("dic").value;
+        for (let i = 0; i < english.length; i++) {
+
+                if (english[i] === meta) {
+                    document.getElementById('z').innerHTML = vietnamese[i]
+                    break;
+                }
+                if (vietnamese[i] === meta){
+                    document.getElementById('z').innerHTML = english[i]
+                    break;
+                }
+                else {
+                    document.write("Yeu cau nhap lai")
+                }
+        }
+    }
+</script>
+
